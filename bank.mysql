@@ -21,7 +21,6 @@ CREATE TABLE conta (
     tipo_conta INT;
     num_agencia INT NOT NULL,
     FOREIGN KEY (num_agencia)
-        REFERENCES editora (num_agencia)
 );
 
 
