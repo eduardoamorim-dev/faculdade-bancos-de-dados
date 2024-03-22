@@ -17,7 +17,7 @@ CREATE TABLE agencia (
 
 CREATE TABLE conta (
     num_conta VARCHAR(7) NOT NULL PRIMARY KEY,
-    saldo FLOAT;
+    saldo FLOAT NOT NULL;
     tipo_conta INT;
     num_agencia INT NOT NULL,
     FOREIGN KEY (num_agencia)
