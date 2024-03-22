@@ -24,7 +24,7 @@ CREATE TABLE conta (
     num_agencia INT NOT NULL,
     FOREIGN KEY (num_agencia)
         REFERENCES agencia (numero_agencia)
-    ON UPDATE RESTRICT ON DELETE RESTRICT,
+    ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 
@@ -43,7 +43,7 @@ CREATE TABLE historico (
     historico_num_conta VARCHAR(7) NOT NULL,
     FOREIGN KEY (historico_num_conta)
         REFERENCES conta (num_conta)
-        ON UPDATE RESTRICT ON DELETE RESTRICT,
+        ON UPDATE CASCADE ON DELETE CASCADE,
     data_inicio DATE,
     CONSTRAINT cpf_num_conta PRIMARY KEY historico(historico_cpf, historico_num_conta)
 );
@@ -52,7 +52,7 @@ CREATE TABLE telefone_cliente (
     telefone_cpf_cliente VARCHAR(14) NOT NULL,
     FOREIGN KEY (telefone_cpf_cliente)
         REFERENCES cliente (cpf)
-        ON UPDATE RESTRICT ON DELETE RESTRICT,
+        ON UPDATE CASCADE ON DELETE CASCADE,
    telefone VARCHAR(20) NOT NULL PRIMARY KEY
 ); 
 
@@ -80,4 +80,23 @@ INSERT INTO telefone_cliente( telefone_cpf_cliente, telefone) VALUES ( '111.222.
 INSERT INTO telefone_cliente( telefone_cpf_cliente, telefone) VALUES ( '666.777.888-99', '(67)3423-9900');
 INSERT INTO telefone_cliente( telefone_cpf_cliente, telefone) VALUES ( '666.777.888-99', '(67)8121-8833');
 
--- 
+
+-- 1) Altere a tabela cliente e crie um novo atributo chamado e-mail para armazenar os emails dos clientes.
+ALTER TABLE cliente ADD COLUMN email VARCHAR(50);
+
+-- 2) Recupere o cpf e o endereço do(s) cliente(s) cujo primeiro nome seja ‘c’.
+SELECT nome FROM cliente WHERE nome LIKE 'C%';
+
+-- 3) Altere o número da agência 0562 para 6342.
+UPDATE agencia SET numero_agencia = 6432 WHERE numero_agencia = 0562;
+
+
+-- 4) Altere o registro do cliente Caetano K Lima acrescentando o email caetanolima@gmail.com.
+-- 5) Conceda à conta 23584-7 um aumento de 10 por cento no saldo.
+-- 6) Insira na tabela de Agência os seguintes dados:
+	-- a) Numero: 1333
+	-- b) Endereço: Rua João José da Silva, 486
+	-- c) Banco do Brasil
+-- 7)Recupere o número e o endereço de todas as agências do Banco do Brasil. Use o código do banco fixo na condição do where.
+-- 8)Recupere todos os valores de atributo de qualquer cliente que é do sexo masculino.
+-- 9)Exclua a conta 86340-2
