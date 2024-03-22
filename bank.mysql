@@ -3,8 +3,7 @@ use bank;
 
 CREATE TABLE banco (
     codigo_banco INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    cod_banco
-    endereco  VARCHAR(100),
+    nome VARCHAR(45),
 );
 
 CREATE TABLE agencia (
