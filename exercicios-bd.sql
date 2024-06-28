@@ -159,6 +159,11 @@ ADD CONSTRAINT fk_trab_proj FOREIGN KEY (ID_Proj) REFERENCES Projeto (ID_Proj) O
 
 SELECT * FROM departamento;
 
+-- 1. Insira na tabela de projeto o projeto “Novo Projeto”, localizado no “Buritis”, associando ao departamento 1.
+
+INSERT INTO projeto
+value(40, 'Novo Projeto', 'Buritis', 1);
+
 
 
 -- 2. Insira na tabela de funcionários o funcionário 'Edgar Marinho', que mora na rua 'R. Alameda, 111', nascido em '13/11/1959', ganha R$ 2000,00, não tem supervisor e está a associado ao departamento 2;
@@ -187,5 +192,19 @@ JOIN departamento d ON f.ID_Depto = d.ID_Depto
 WHERE d.NomeDepto = 'Pesquisa'; 
 
 -- 6. Liste o nome e a data de nascimento do empregado 'Joao Silva'. Mostre no formato brasileiro com dois dígitos no ano. (pesquise a função date_format)
+
+
+-- 7. Liste o nome dos empregados que não possuem supervisores.
+-- 8. Liste o nome dos empregados, o nome dos seus departamentos e o nome dos projetos em que eles trabalham, ordenados pelo departamento e pelo nome do projeto.
+-- 9. Liste a soma, a média, o maior e o menor salário de todos os empregados.
+-- 10. Liste a soma, a média, o maior e o menor salário dos empregados do departamento 'Pesquisa'.
+-- 11. Liste o nome dos funcionários que não tem dependentes.
+-- 12. Para cada projeto localizado no 'Luxemburgo', liste o numero do projeto, o número do departamento que o controla e o nome, endereço e data de aniversário do gerente do departamento.
+-- 13. Liste o nome e localização dos projetos que não tem funcionários trabalhando neles.
+-- 14. Liste o nome dos funcionários que não tem dependentes e não estejam trabalhando em nenhum projeto.
+-- 15. Liste para cada empregado, o seu nome e o nome de seu supervisor.
+-- 16. Liste o nome de cada projeto com o número de empregados que trabalham no projeto.
+-- 17. Para cada projeto que possua mais de 2 empregados na equipe, liste o nome do projeto e a quantidade de empregados que trabalham no mesmo.,
+-- 18. Para cada departamento que possua mais do que 2 empregados, liste o nome do departamento e o nome dos empregados que ganham mais do que 800,00.
 
 
