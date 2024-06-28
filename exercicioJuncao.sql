@@ -1,3 +1,15 @@
+-- 1. Liste o nome, o CPF e a data de nascimento de todos os alunos.
+-- 2. Liste o nome, o CPF e o sexo de todos os alunos nascidos após 1990.
+-- 3. Liste o nome do curso com a maior carga horária.
+-- 4. Excluir todas as disciplinas com a carga horária inferior a 20 horas:
+-- 5. Liste o ID do aluno com a menor nota na disciplina de Programação Orientada a
+-- Objetos.
+-- 6. Liste os IDS de todos os alunos que estão matriculados em um curso com carga
+-- horária superior a 2400 horas:
+-- 7. Liste o nome, o nome do curso e a carga horária do curso de cada aluno.
+-- 8. Atualizar a carga horária do curso de Administração para 300 horas: 
+
+
 -- Seleciona o nome, CPF e data de nascimento de todos os alunos
 SELECT nome, cpf, data_nascimento
 FROM aluno;
