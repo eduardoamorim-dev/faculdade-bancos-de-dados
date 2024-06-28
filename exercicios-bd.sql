@@ -164,8 +164,6 @@ SELECT * FROM departamento;
 INSERT INTO projeto
 value(40, 'Novo Projeto', 'Buritis', 1);
 
-
-
 -- 2. Insira na tabela de funcionários o funcionário 'Edgar Marinho', que mora na rua 'R. Alameda, 111', nascido em '13/11/1959', ganha R$ 2000,00, não tem supervisor e está a associado ao departamento 2;
 
 INSERT INTO Funcionario
