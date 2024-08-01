@@ -3,7 +3,7 @@
 CREATE USER my_usser1 IDENTIFIED BY "123456778";
 
 -- 2. Crie um usuário my_admin;
-CREATE USER my_admin IDENTIFIED BY "nat1234";
+CREATE USER my_admin IDENTIFIED BY "eduardoamorim";
 
 -- 3. Crie/use dois bancos de dados bd1=universidade e db2 quaisquer. Pode ser bancos de outros exercícios. Crie algumas tabelas aleatoriamente.
 -- 4. Conceda acesso total para o usuário my_admin ao banco bd1.
