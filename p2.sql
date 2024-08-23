@@ -100,6 +100,8 @@ END //
 
 DELIMITER ;
 
+
+
 -- 3) Crie um usuário chamado “secretaria”. Este usuário tem permissões para visualizar relatórios de vendas, ou seja,
 --    executar a procedure. Além disso ela poderá inserir, remover, atualizar e excluir imóveis, mas não poderá alterar nada de
 --    vendas e nem de corretores.
